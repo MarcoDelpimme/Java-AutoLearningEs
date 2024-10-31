@@ -36,7 +36,7 @@ public class ManagementFilm {
                 case 2:
                     System.out.println("Insert Title of film to remove");
                     String titleRemove = scanner.nextLine();
-                    videoteca.removeFilm(new Film(titleRemove, 0));
+                    videoteca.removeFilm(titleRemove); // Passa solo il titolo
                     break;
 
                 case 3:

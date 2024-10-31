@@ -14,12 +14,15 @@ public class Videoteca {
         System.out.println("Film added: " + film.getTitle());
     }
 
-    public void removeFilm(Film film) {
-        if (filmAvailable.remove(film)) {
-            System.out.println("Film removed: " + film.getTitle());
-        } else {
-            System.out.println("Film not found");
+    public void removeFilm(String title) {
+        for (int i = 0; i < filmAvailable.size(); i++) {
+            if (filmAvailable.get(i).getTitle().equals(title)) {
+                filmAvailable.remove(i);
+                System.out.println("Film removed: " + title);
+                return;
+            }
         }
+        System.out.println("Film not found: " + title);
     }
 
     public void registerUser(User user) {
