@@ -1,13 +1,10 @@
 public class Film {
-
     private String title;
-
     private int year;
 
     public Film(String title, int year) {
         this.title = title;
         this.year = year;
-
     }
 
     public String getTitle() {
@@ -26,4 +23,7 @@ public class Film {
         this.year = year;
     }
 
+    public String toString() {
+        return title + " (" + year + ")";
+    }
 }
