@@ -1,33 +1,34 @@
 
 // per dichiarare una constant basta mettere final prima del tipo di una variabile es: final int x = 0;
-
-import java.util.Scanner; //importa lo scanner della classe
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-
         UserFunction userFunction = new UserFunction();
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
-        while (!exit) {
 
-            System.out.println("selezion un'opzione");
+        while (!exit) {
+            System.out.println("\nSeleziona un'opzione:");
             System.out.println("1. Register");
             System.out.println("2. Login");
             System.out.println("3. Logout");
-            System.out.println("4. Exit");
+            System.out.println("4. Aggiungi Task");
+            System.out.println("5. Visualizza Task");
+            System.out.println("6. Elimina Task");
+            System.out.println("7. Exit");
             System.out.print("Inserisci la tua opzione: ");
-
             int scelta = scanner.nextInt();
 
+            String username, password;
             switch (scelta) {
                 case 1:
                     System.out.print("Inserisci username: ");
-                    String username = scanner.next();
+                    username = scanner.next();
                     System.out.print("Inserisci password: ");
-                    String password = scanner.next();
+                    password = scanner.next();
                     userFunction.register(username, password);
                     break;
                 case 2:
@@ -43,16 +44,74 @@ public class Main {
                     userFunction.logout(username);
                     break;
                 case 4:
-                    System.out.println("stai uscendo dal programma Arrivederci");
+                    System.out.print("Inserisci username: ");
+                    username = scanner.next();
+                    System.out.print("Inserisci descrizione task: ");
+                    scanner.nextLine(); // Consuma il newline rimanente
+                    String taskDescription = scanner.nextLine();
+                    userFunction.addTask(username, taskDescription);
+                    break;
+                case 5:
+                    System.out.print("Inserisci username: ");
+                    username = scanner.next();
+                    userFunction.viewTasks(username);
+                    break;
+                case 6:
+                    System.out.print("Inserisci username: ");
+                    username = scanner.next();
+                    System.out.print("Inserisci indice task da eliminare: ");
+                    int taskIndex = scanner.nextInt();
+                    userFunction.deleteTask(username, taskIndex);
+                    break;
+                case 7:
+                    System.out.println("Stai uscendo dal programma. Arrivederci!");
                     exit = true;
                     break;
                 default:
-                    System.out.println("scelta non valida");
+                    System.out.println("Scelta non valida.");
                     break;
             }
         }
         scanner.close();
     }
+
+    // System.out.println("Hello World!");
+
+    // ArrayList<String> players = new ArrayList<>();
+    // players.add("Daniele Cali'");
+    // players.add("Fabio De Biase");
+    // players.add("Giuseppe Saccone");
+    // players.add("Giusy D'Ambrosio");
+    // players.add("Luca Mancogna");
+    // players.add("Christian pizzo");
+    // players.add("Maria Rosaria Impilli");
+    // players.add("Paolo Mariano Fidanza");
+    // players.add("Riccardo Manfellotto");
+    // players.add("Steliyana Vasileva");
+    // Collections.shuffle(players);
+
+    // ArrayList<ArrayList<String>> groups = new ArrayList<>();
+
+    // ArrayList<String> bestGroup = new ArrayList<>();
+    // bestGroup.add("Marco Delpopolo");
+    // bestGroup.add("Giorgio Madeo");
+    // bestGroup.add("Saverio Semeraro");
+    // bestGroup.add("Roccaldo Digrisolo");
+    // groups.add(bestGroup);
+
+    // for (int i = 0; i < 3; i++) {
+    // groups.add(new ArrayList<>());
+    // }
+
+    // for (int i = 0; i < players.size(); i++) {
+    // groups.get((i % 3) + 1).add(players.get(i));
+    // }
+
+    // for (int i = 0; i < groups.size(); i++) {
+    // System.out.println("group " + (i + 1) + ": " + groups.get(i));
+    // }
+
+    //
 
     // Calculator calculator1 = new Calculator();
 
