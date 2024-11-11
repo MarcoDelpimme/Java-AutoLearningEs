@@ -39,10 +39,10 @@ public class GameBoard {
 
         matrix[x][y] = 0; // Elimina la cella
         int cellsEliminated = 1;
-        cellsEliminated += floodFill(x + 1, y, value);
-        cellsEliminated += floodFill(x - 1, y, value);
-        cellsEliminated += floodFill(x, y + 1, value);
-        cellsEliminated += floodFill(x, y - 1, value);
+        cellsEliminated += floodFill(x + 1, y, value);// sotto
+        cellsEliminated += floodFill(x - 1, y, value);// sopra
+        cellsEliminated += floodFill(x, y + 1, value);// destra
+        cellsEliminated += floodFill(x, y - 1, value);// sinistra
 
         return cellsEliminated;
     }

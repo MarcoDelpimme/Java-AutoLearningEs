@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        TryCatch tryCatch = new TryCatch();
+        tryCatch.arrayInteger();
+
         // ex1
         // Spesa spesa = new Spesa();
         // boolean Scelta = true;
@@ -104,51 +108,55 @@ public class Main {
         // _________________________________________
 
         // ex5
-        RubricaTelefonica rubricaTelefonica = new RubricaTelefonica();
-        Scanner scanner = new Scanner(System.in);
-        int scelta;
-        do {
-            System.out.println("\n--- Rubrica Telefonica ---");
-            System.out.println("1. Aggiungi contatto");
-            System.out.println("2. Stampa tutti i contatti");
-            System.out.println("3. Cerca numero di telefono");
-            System.out.println("4. Esci");
-            System.out.print("Scegli un'opzione: ");
-            scelta = scanner.nextInt();
-            scanner.nextLine(); // Consuma la nuova linea
+        // RubricaTelefonica rubricaTelefonica = new RubricaTelefonica();
+        // Scanner scanner = new Scanner(System.in);
+        // int scelta;
+        // do {
+        // System.out.println("\n--- Rubrica Telefonica ---");
+        // System.out.println("1. Aggiungi contatto");
+        // System.out.println("2. Stampa tutti i contatti");
+        // System.out.println("3. Cerca numero di telefono");
+        // System.out.println("4. Esci");
+        // System.out.print("Scegli un'opzione: ");
+        // scelta = scanner.nextInt();
+        // scanner.nextLine(); // Consuma la nuova linea
 
-            switch (scelta) {
-                case 1:
-                    rubricaTelefonica.aggiungiContatto();
-                    break;
-                case 2:
-                    rubricaTelefonica.stampaContatti();
-                    break;
-                case 3:
-                    rubricaTelefonica.cercaNumero();
-                    break;
-                case 4:
-                    System.out.println("Uscita dal programma.");
-                    break;
-                default:
-                    System.out.println("Opzione non valida.");
-            }
-        } while (scelta != 4);
+        // switch (scelta) {
+        // case 1:
+        // rubricaTelefonica.aggiungiContatto();
+        // break;
+        // case 2:
+        // rubricaTelefonica.stampaContatti();
+        // break;
+        // case 3:
+        // rubricaTelefonica.cercaNumero();
+        // break;
+        // case 4:
+        // System.out.println("Uscita dal programma.");
+        // break;
+        // default:
+        // System.out.println("Opzione non valida.");
+        // }
+        // } while (scelta != 4);
+
+        // scanner.close();
+        // }
+
+        // _________________________________________
+
+        // Main gestione = new Main();
+        // Scanner scanner = new Scanner(System.in);
+
+        // String continua;
+        // do {
+        // gestione.aggiungiStudente();
+        // System.out.print("Vuoi aggiungere un altro studente? (s/n): ");
+        // continua = scanner.nextLine().trim().toLowerCase();
+        // } while (continua.equals("s"));
+
+        // gestione.stampaStudenti();
+
     }
-    // _________________________________________
-
-    // Main gestione = new Main();
-    // Scanner scanner = new Scanner(System.in);
-
-    // String continua;
-    // do {
-    // gestione.aggiungiStudente();
-    // System.out.print("Vuoi aggiungere un altro studente? (s/n): ");
-    // continua = scanner.nextLine().trim().toLowerCase();
-    // } while (continua.equals("s"));
-
-    // gestione.stampaStudenti();
-
 }
 
 // HASHSET

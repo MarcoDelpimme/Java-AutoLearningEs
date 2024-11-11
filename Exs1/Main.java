@@ -6,73 +6,91 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        UserFunction userFunction = new UserFunction();
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
 
-        while (!exit) {
-            System.out.println("\nSeleziona un'opzione:");
-            System.out.println("1. Register");
-            System.out.println("2. Login");
-            System.out.println("3. Logout");
-            System.out.println("4. Aggiungi Task");
-            System.out.println("5. Visualizza Task");
-            System.out.println("6. Elimina Task");
-            System.out.println("7. Exit");
-            System.out.print("Inserisci la tua opzione: ");
-            int scelta = scanner.nextInt();
+        Moltiplicatore moltiplicatore = new Moltiplicatore();
+        System.out.println(moltiplicatore.moltiplica(1, 2, 3, 4));
+        System.out.println(moltiplicatore.moltiplica(1, 2, 3));
+        System.out.println(moltiplicatore.moltiplica(1, 2));
 
-            String username, password;
-            switch (scelta) {
-                case 1:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    System.out.print("Inserisci password: ");
-                    password = scanner.next();
-                    userFunction.register(username, password);
-                    break;
-                case 2:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    System.out.print("Inserisci password: ");
-                    password = scanner.next();
-                    userFunction.login(username, password);
-                    break;
-                case 3:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    userFunction.logout(username);
-                    break;
-                case 4:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    System.out.print("Inserisci descrizione task: ");
-                    scanner.nextLine(); // Consuma il newline rimanente
-                    String taskDescription = scanner.nextLine();
-                    userFunction.addTask(username, taskDescription);
-                    break;
-                case 5:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    userFunction.viewTasks(username);
-                    break;
-                case 6:
-                    System.out.print("Inserisci username: ");
-                    username = scanner.next();
-                    System.out.print("Inserisci indice task da eliminare: ");
-                    int taskIndex = scanner.nextInt();
-                    userFunction.deleteTask(username, taskIndex);
-                    break;
-                case 7:
-                    System.out.println("Stai uscendo dal programma. Arrivederci!");
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Scelta non valida.");
-                    break;
-            }
-        }
-        scanner.close();
+        Animale animaleAll = new Animale();
+        animaleAll.verso();
+
+        Animale gatto = new Gatto();
+        gatto.verso();
+
+        // int base = 3, esponente = 3;
+        // System.out.println("la potenza di " + base + "^" + esponente + " " + "e':" +
+        // ElevamentoPotenza.potenza(3, 3));
+
+        // Ricorsive ricorsive = new Ricorsive();
+        // System.out.println("Il numero di Fibonacci per 10 e': " +
+        // ricorsive.fibonacci(10));
+        // UserFunction userFunction = new UserFunction();
+        // Scanner scanner = new Scanner(System.in);
+        // boolean exit = false;
+        // while (!exit) {
+        // System.out.println("\nSeleziona un'opzione:");
+        // System.out.println("1. Register");
+        // System.out.println("2. Login");
+        // System.out.println("3. Logout");
+        // System.out.println("4. Aggiungi Task");
+        // System.out.println("5. Visualizza Task");
+        // System.out.println("6. Elimina Task");
+        // System.out.println("7. Exit");
+        // System.out.print("Inserisci la tua opzione: ");
+        // int scelta = scanner.nextInt();
+
+        // String username, password;
+        // switch (scelta) {
+        // case 1:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // System.out.print("Inserisci password: ");
+        // password = scanner.next();
+        // userFunction.register(username, password);
+        // break;
+        // case 2:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // System.out.print("Inserisci password: ");
+        // password = scanner.next();
+        // userFunction.login(username, password);
+        // break;
+        // case 3:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // userFunction.logout(username);
+        // break;
+        // case 4:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // System.out.print("Inserisci descrizione task: ");
+        // scanner.nextLine(); // Consuma il newline rimanente
+        // String taskDescription = scanner.nextLine();
+        // userFunction.addTask(username, taskDescription);
+        // break;
+        // case 5:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // userFunction.viewTasks(username);
+        // break;
+        // case 6:
+        // System.out.print("Inserisci username: ");
+        // username = scanner.next();
+        // System.out.print("Inserisci indice task da eliminare: ");
+        // int taskIndex = scanner.nextInt();
+        // userFunction.deleteTask(username, taskIndex);
+        // break;
+        // case 7:
+        // System.out.println("Stai uscendo dal programma. Arrivederci!");
+        // exit = true;
+        // break;
+        // default:
+        // System.out.println("Scelta non valida.");
+        // break;
+        // }
+        // }
+        // scanner.close();
     }
 
     // System.out.println("Hello World!");
