@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="GZRJc5gqAGpSBLRZ-ThO" name="Page-1">
+        <mxGraphModel dx="508" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="15" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="330" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0;entryY=0.328;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="337" y="224" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.723;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="room_id&lt;br&gt;room_number&lt;br&gt;type&lt;br&gt;status&lt;br&gt;price" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="170" width="90" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;" parent="1" source="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="440" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="user_id&lt;br&gt;first_name&lt;br&gt;last_name&lt;br&gt;email&lt;br&gt;phone_number&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="170" width="90" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;" parent="1" source="6" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="allocation_id&lt;br&gt;user_id&lt;br&gt;room_Id&lt;br&gt;start_date&lt;br&gt;end_date&lt;br&gt;status&lt;br&gt;F.K. (user_id)&lt;br&gt;F.K. (room_id)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="170" width="90" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="ROOMS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="140" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="USERS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="495" y="140" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ALLOCATIONS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="140" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="int roomId&lt;br&gt;string type&lt;br&gt;string status&lt;br&gt;get e set&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="490" width="100" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="CLASS&lt;br&gt;Room" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="450" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="allocationId&lt;br&gt;userid&lt;br&gt;roomid&lt;br&gt;startdate&lt;br&gt;enddate&lt;br&gt;status&lt;br&gt;___________&lt;br&gt;METHOD:&lt;br&gt;--------------&lt;br&gt;get e set&lt;br&gt;createAllocation con la query&lt;br&gt;changeAllocationstatus con la query" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="490" width="130" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Allocation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="460" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="metti l id o nome user&lt;br&gt;metti l'id della stanza&lt;br&gt;metti la data di inizio&lt;br&gt;metti la data della fine&lt;br&gt;imposta lo stato&lt;br&gt;creatoallocation" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="800" width="120" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="MAIN&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="770" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="DB CONNECTIO&amp;nbsp;&lt;br&gt;HIDED" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="250" width="120" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="userId&lt;br&gt;string firstname&lt;br&gt;string lastname&lt;br&gt;string phonenumber&lt;br&gt;string mail&amp;nbsp;&lt;br&gt;get e set&lt;br&gt;creaUser" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="490" width="110" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="User" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="455" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="addRom con query&lt;br&gt;List&amp;lt;room&amp;gt;GetAvailableRoms&lt;br&gt;changeRoomStatus" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="490" width="180" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="RoomManager" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="460" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

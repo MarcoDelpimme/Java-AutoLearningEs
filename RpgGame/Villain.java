@@ -27,6 +27,11 @@ public class Villain extends Character implements MagicAttack, MeleeAttack {
         System.out.println("Villain casts a magic spell with power of " + this.magicPower + ".");
     }
 
+    public String getStats() {
+        return "Name: " + name + "\nHealth: " + health + "\nMagic Power: " + magicPower + "\nPhysical Power: "
+                + physicalPower;
+    }
+
     @Override
     public void displayCharacterStats() {
         System.out.println("Name: " + name);

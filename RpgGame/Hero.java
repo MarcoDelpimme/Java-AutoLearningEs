@@ -15,6 +15,11 @@ public class Hero extends Character implements MeleeAttack {
         this.physicalPower += amount;
     }
 
+    public String getStats() {
+        return "Name: " + name + "\nHealth: " + health + "\nPhysical Power: "
+                + physicalPower;
+    }
+
     @Override
     public void displayCharacterStats() {
         System.out.println("Name: " + name);
